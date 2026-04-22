@@ -1,3 +1,6 @@
+/* =========================
+   CSS RESET
+========================= */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -64,6 +67,9 @@ p {
   margin-bottom: 1rem;
 }
 
+/* =========================
+   UTILITIES
+========================= */
 .container {
   width: 100%;
   max-width: 1200px;
@@ -88,6 +94,9 @@ p {
   margin-left: 0.6rem;
 }
 
+/* =========================
+   BUTTONS
+========================= */
 .btn {
   display: inline-block;
   border: 0;
@@ -117,6 +126,9 @@ p {
   padding: 1rem 1.3rem;
 }
 
+/* =========================
+   HEADER MOBILE
+========================= */
 .site-header {
   background: #222;
   padding: 1rem 0;
@@ -173,6 +185,9 @@ p {
   cursor: pointer;
 }
 
+/* =========================
+   HERO
+========================= */
 .hero-wrapper,
 .vision-wrapper {
   position: relative;
@@ -208,6 +223,9 @@ p {
   margin-bottom: 1rem;
 }
 
+/* =========================
+   ABOUT
+========================= */
 .about-section {
   background: #ffe6ac;
   padding: 1rem 0;
@@ -229,6 +247,9 @@ p {
   font-size: 1rem;
 }
 
+/* =========================
+   SERVICES
+========================= */
 .services-section {
   padding: 2rem 0;
 }
@@ -260,6 +281,9 @@ p {
   margin-bottom: 1.2rem;
 }
 
+/* =========================
+   VISION
+========================= */
 .vision-image {
   min-height: 340px;
   object-fit: cover;
@@ -285,6 +309,9 @@ p {
   font-size: 0.95rem;
 }
 
+/* =========================
+   TEAM
+========================= */
 .team-section {
   padding: 2rem 0;
 }
@@ -309,6 +336,9 @@ p {
   margin-bottom: 1rem;
 }
 
+/* =========================
+   CONTACT
+========================= */
 .contact-section {
   padding: 2rem 0;
 }
@@ -377,6 +407,9 @@ p {
   min-height: 420px;
 }
 
+/* =========================
+   FOOTER
+========================= */
 .site-footer {
   background: #222;
   color: #c78c06;
@@ -395,6 +428,9 @@ p {
   text-decoration: underline;
 }
 
+/* =========================
+   DESKTOP 760PX+
+========================= */
 @media screen and (min-width: 760px) {
   .container {
     max-width: 1200px;
@@ -402,6 +438,7 @@ p {
     padding: 0 15px;
   }
 
+  /* Header */
   .site-header {
     padding: 1rem 0;
   }
@@ -449,6 +486,7 @@ p {
     flex-shrink: 0;
   }
 
+  /* Hero */
   .hero-image {
     height: 540px;
     min-height: 540px;
@@ -460,26 +498,24 @@ p {
   }
 
   .hero-content {
-    max-width: 640px;
+    max-width: 650px;
     width: 100%;
     padding: 2rem;
-    margin-top: 1.4rem;
-    background: rgba(0, 0, 0, 0.68);
+    margin-top: 1.5rem;
+    background: rgba(0, 0, 0, 0.65);
   }
 
   .hero-content h1 {
-    font-size: 4.2rem;
-    line-height: 1.05;
-    margin-bottom: 1rem;
+    font-size: 4rem;
+    line-height: 1.1;
   }
 
   .hero-content p {
-    font-size: 0.95rem;
-    margin-bottom: 1.2rem;
+    font-size: 1rem;
   }
 
+  /* About */
   .about-section {
-    margin-top: 4rem;
     padding: 0;
   }
 
@@ -507,6 +543,7 @@ p {
     font-size: 3rem;
   }
 
+  /* Services */
   .services-section {
     padding: 3rem 0;
   }
@@ -545,18 +582,17 @@ p {
 
   .service-body h3 {
     font-size: 1.8rem;
-    line-height: 1.2;
   }
 
   .service-body p {
-    font-size: 0.94rem;
-    margin-bottom: 1.2rem;
+    font-size: 0.95rem;
   }
 
   .service-body .btn-dark {
     margin-top: auto;
   }
 
+  /* Vision */
   .vision-image {
     height: 260px;
     min-height: 260px;
@@ -575,13 +611,14 @@ p {
     font-size: 2rem;
   }
 
+  /* Team */
   .team-section {
     padding: 3rem 0;
   }
 
   .team-member {
     display: flex;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
     background: #ffe6ac;
   }
 
@@ -598,6 +635,7 @@ p {
     padding: 1rem;
   }
 
+  /* Contact */
   .contact-section {
     padding: 3rem 0;
   }
@@ -633,7 +671,22 @@ p {
     min-height: 320px;
   }
 
+  /* Footer */
   .site-footer {
-    padding: 2rem 0;
+    padding: 1.5rem 0;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
