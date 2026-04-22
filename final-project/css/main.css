@@ -432,18 +432,13 @@ p {
    DESKTOP 760PX+
 ========================= */
 @media screen and (min-width: 760px) {
-  h1 {
-    font-size: 4.5rem;
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
   }
 
-  h2 {
-    font-size: 3.2rem;
-  }
-
-  h3 {
-    font-size: 2rem;
-  }
-
+  /* Header */
   .site-header {
     padding: 1rem 0;
   }
@@ -456,11 +451,14 @@ p {
 
   .logo-link {
     width: 100px;
+    max-width: 100px;
     margin-bottom: 0;
+    flex-shrink: 0;
   }
 
   .logo {
     width: 100px;
+    max-width: 100px;
   }
 
   .site-nav {
@@ -470,21 +468,29 @@ p {
   .nav-list {
     display: flex;
     align-items: center;
-    text-align: left;
+    justify-content: space-between;
+    text-align: center;
   }
 
   .nav-list li {
     flex: 1;
   }
 
+  .nav-link {
+    padding: 1rem 0.75rem;
+  }
+
   .search-form {
     width: 260px;
     margin-top: 0;
+    flex-shrink: 0;
   }
 
+  /* Hero */
   .hero-image {
     height: 540px;
     min-height: 540px;
+    object-fit: cover;
   }
 
   .hero-overlay {
@@ -492,16 +498,23 @@ p {
   }
 
   .hero-content {
-    max-width: 760px;
-    width: auto;
+    max-width: 650px;
+    width: 100%;
     padding: 2rem;
     margin-top: 1.5rem;
+    background: rgba(0, 0, 0, 0.65);
   }
 
   .hero-content h1 {
-    font-size: 4.6rem;
+    font-size: 4rem;
+    line-height: 1.1;
   }
 
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  /* About */
   .about-section {
     padding: 0;
   }
@@ -509,6 +522,7 @@ p {
   .about-inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 0;
     align-items: stretch;
   }
 
@@ -522,18 +536,20 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 1.5rem;
+    padding: 1.5rem;
   }
 
   .about-content h2 {
     font-size: 3rem;
   }
 
+  /* Services */
   .services-section {
     padding: 3rem 0;
   }
 
   .services-grid {
+    display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 1rem;
   }
@@ -549,6 +565,19 @@ p {
   .service-card {
     display: flex;
     flex-direction: column;
+    background: #ffe6ac;
+  }
+
+  .service-image {
+    width: 100%;
+    display: block;
+  }
+
+  .service-body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
   }
 
   .service-body h3 {
@@ -559,17 +588,38 @@ p {
     font-size: 0.95rem;
   }
 
+  .service-body .btn-dark {
+    margin-top: auto;
+  }
+
+  /* Vision */
   .vision-image {
     height: 260px;
     min-height: 260px;
+    object-fit: cover;
+  }
+
+  .vision-overlay {
+    align-items: center;
+  }
+
+  .vision-content {
+    max-width: 900px;
   }
 
   .vision-content h2 {
     font-size: 2rem;
   }
 
+  /* Team */
+  .team-section {
+    padding: 3rem 0;
+  }
+
   .team-member {
     display: flex;
+    margin-bottom: 0;
+    background: #ffe6ac;
   }
 
   .team-member-reverse {
@@ -581,8 +631,18 @@ p {
     width: 50%;
   }
 
+  .team-content {
+    padding: 1rem;
+  }
+
+  /* Contact */
+  .contact-section {
+    padding: 3rem 0;
+  }
+
   .contact-grid {
-    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     column-gap: 2rem;
     row-gap: 2rem;
     align-items: start;
@@ -609,5 +669,10 @@ p {
 
   .location-wrap iframe {
     min-height: 320px;
+  }
+
+  /* Footer */
+  .site-footer {
+    padding: 1.5rem 0;
   }
 }
