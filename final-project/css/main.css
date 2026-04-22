@@ -282,6 +282,10 @@ a {
   gap: 2rem;
 }
 
+.contact-form {
+  margin-bottom: 3rem;
+}
+
 .form-group {
   margin-bottom: 1rem;
 }
@@ -303,12 +307,8 @@ a {
   resize: vertical;
 }
 
-.contact-form .btn-primary {
-  margin-bottom: 2rem;
-}
-
-.hours-wrap {
-  margin-top: 1rem;
+.hours-wrap h3 {
+  margin-top: 2rem;
 }
 
 .hours-table {
@@ -463,6 +463,10 @@ a {
   .hours-wrap {
     grid-column: 1 / 3;
     grid-row: 2 / 3;
+    margin-top: 0;
+  }
+
+  .hours-wrap h3 {
     margin-top: 0;
   }
 }
