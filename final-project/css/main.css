@@ -1,3 +1,6 @@
+/* =========================
+   CSS RESET
+========================= */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -16,28 +19,71 @@ iframe {
   border: 0;
 }
 
+input,
+textarea,
+button {
+  font: inherit;
+}
+
 body {
-  font-family: Open Sans, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #222;
   background: #f3f3f3;
   line-height: 1.5;
 }
 
-h1, h2, h3 {
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
   line-height: 1.2;
   margin-bottom: 0.75rem;
+}
+
+h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
 }
 
 p {
   margin-bottom: 1rem;
 }
 
+/* =========================
+   UTILITIES
+========================= */
 .container {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
+.arrow {
+  margin-left: 0.6rem;
+}
+
+/* =========================
+   BUTTONS
+========================= */
 .btn {
   display: inline-block;
   border: 0;
@@ -58,6 +104,9 @@ p {
   text-align: center;
 }
 
+/* =========================
+   HERO
+========================= */
 .hero-wrapper {
   position: relative;
 }
@@ -81,19 +130,27 @@ p {
   padding: 1.2rem;
 }
 
+/* =========================
+   ABOUT
+========================= */
 .about-section {
   background: #ffe6ac;
   padding: 1rem 0;
 }
 
+/* =========================
+   DESKTOP
+========================= */
 @media screen and (min-width: 760px) {
 
+  /* HEADER */
   .header-inner {
     display: flex;
     align-items: center;
     gap: 1rem;
   }
 
+  /* HERO */
   .hero-image {
     height: 540px;
   }
@@ -104,8 +161,9 @@ p {
     margin-top: 1.5rem;
   }
 
+  /* ✅ FIX ADDED HERE */
   .about-section {
-    margin-top: 5rem;
+    margin-top: 5rem; /* 👈 THIS IS THE FIX */
     padding: 0;
   }
 
