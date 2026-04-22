@@ -77,7 +77,20 @@ p {
   padding: 0 15px;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .arrow {
+  font-family: Arial, sans-serif;
   margin-left: 0.6rem;
 }
 
@@ -97,6 +110,7 @@ p {
 }
 
 .btn-dark {
+  display: inline-block;
   background: #222;
   color: #fff;
   padding: 1rem 1.2rem;
@@ -104,10 +118,78 @@ p {
   text-align: center;
 }
 
+.btn-outline {
+  display: inline-block;
+  background: #222;
+  color: #fff;
+  border: 1px solid #c78c06;
+  padding: 1rem 1.3rem;
+}
+
+/* =========================
+   HEADER MOBILE
+========================= */
+.site-header {
+  background: #222;
+  padding: 1rem 0;
+}
+
+.logo-link {
+  display: block;
+  width: 100%;
+  max-width: 150px;
+  background: #c78c06;
+  margin-bottom: 1rem;
+}
+
+.logo {
+  width: 100%;
+  max-width: 150px;
+}
+
+.nav-list {
+  display: block;
+  text-align: center;
+}
+
+.nav-link {
+  display: block;
+  color: #c78c06;
+  padding: 1rem;
+}
+
+.nav-current {
+  background: #c78c06;
+  color: #222;
+}
+
+.search-form {
+  display: flex;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid #c78c06;
+  padding: 0.65rem;
+  background: #fff;
+}
+
+.search-button {
+  border: 1px solid #c78c06;
+  background: #222;
+  color: #c78c06;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+
 /* =========================
    HERO
 ========================= */
-.hero-wrapper {
+.hero-wrapper,
+.vision-wrapper {
   position: relative;
 }
 
@@ -130,6 +212,17 @@ p {
   padding: 1.2rem;
 }
 
+.hero-content h1 {
+  font-size: 4rem;
+  line-height: 1.05;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
 /* =========================
    ABOUT
 ========================= */
@@ -138,38 +231,448 @@ p {
   padding: 1rem 0;
 }
 
+.about-inner {
+  display: block;
+}
+
+.about-image {
+  margin-bottom: 1rem;
+}
+
+.about-content h2 {
+  font-size: 4rem;
+}
+
+.about-content p {
+  font-size: 1rem;
+}
+
 /* =========================
-   DESKTOP
+   SERVICES
+========================= */
+.services-section {
+  padding: 2rem 0;
+}
+
+.services-section h2 {
+  margin-bottom: 1.5rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.service-card {
+  background: #ffe6ac;
+}
+
+.service-body {
+  padding: 1rem;
+}
+
+.service-body h3 {
+  font-size: 3.2rem;
+}
+
+.service-body p {
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+/* =========================
+   VISION
+========================= */
+.vision-image {
+  min-height: 340px;
+  object-fit: cover;
+}
+
+.vision-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+}
+
+.vision-content {
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.vision-content h2 {
+  font-size: 2.6rem;
+}
+
+.vision-content p {
+  font-size: 0.95rem;
+}
+
+/* =========================
+   TEAM
+========================= */
+.team-section {
+  padding: 2rem 0;
+}
+
+.team-section h2 {
+  margin-bottom: 1.5rem;
+}
+
+.team-member {
+  background: #ffe6ac;
+  margin-bottom: 1rem;
+}
+
+.team-content {
+  padding: 1rem;
+}
+
+.team-role {
+  font-weight: 700;
+  border-bottom: 2px solid #c78c06;
+  padding-bottom: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+/* =========================
+   CONTACT
+========================= */
+.contact-section {
+  padding: 2rem 0;
+}
+
+.contact-section h2 {
+  margin-bottom: 1.5rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.contact-form-wrap {
+  order: 1;
+}
+
+.hours-wrap {
+  order: 2;
+}
+
+.location-wrap {
+  order: 3;
+}
+
+.form-group {
+  margin-bottom: 0.9rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  border: 1px solid #777;
+  padding: 0.7rem;
+  background: #fff;
+}
+
+.form-group textarea {
+  height: 220px;
+  resize: vertical;
+}
+
+.hours-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.hours-table th,
+.hours-table td {
+  border: 1px solid #777;
+  padding: 0.9rem;
+  text-align: left;
+}
+
+.hours-table thead {
+  background: #ffe6ac;
+}
+
+.location-wrap iframe {
+  min-height: 420px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.site-footer {
+  background: #222;
+  color: #c78c06;
+  padding: 1.5rem 0;
+}
+
+.footer-inner p {
+  margin-bottom: 1rem;
+}
+
+.footer-inner p:last-child {
+  margin-bottom: 0;
+}
+
+.site-footer a {
+  text-decoration: underline;
+}
+
+/* =========================
+   DESKTOP 760PX+
 ========================= */
 @media screen and (min-width: 760px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
 
-  /* HEADER */
+  /* Header */
+  .site-header {
+    padding: 1rem 0;
+  }
+
   .header-inner {
     display: flex;
     align-items: center;
     gap: 1rem;
   }
 
-  /* HERO */
+  .logo-link {
+    width: 100px;
+    max-width: 100px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .logo {
+    width: 100px;
+    max-width: 100px;
+  }
+
+  .site-nav {
+    flex: 1;
+  }
+
+  .nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  .nav-list li {
+    flex: 1;
+  }
+
+  .nav-link {
+    padding: 1rem 0.75rem;
+  }
+
+  .search-form {
+    width: 260px;
+    margin-top: 0;
+    flex-shrink: 0;
+  }
+
+  /* Hero */
   .hero-image {
     height: 540px;
+    min-height: 540px;
+    object-fit: cover;
+  }
+
+  .hero-overlay {
+    align-items: flex-start;
   }
 
   .hero-content {
     max-width: 650px;
+    width: 100%;
     padding: 2rem;
     margin-top: 1.5rem;
+    background: rgba(0, 0, 0, 0.65);
   }
 
-  /* ✅ FIX ADDED HERE */
+  .hero-content h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  /* About */
   .about-section {
-    margin-top: 5rem; /* 👈 THIS IS THE FIX */
     padding: 0;
   }
 
   .about-inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 0;
+    align-items: stretch;
   }
 
+  .about-image {
+    margin-bottom: 0;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+
+  .about-content h2 {
+    font-size: 3rem;
+  }
+
+  /* Services */
+  .services-section {
+    padding: 3rem 0;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+  }
+
+  .service-card-large {
+    grid-column: span 3;
+  }
+
+  .services-grid .service-card:not(.service-card-large) {
+    grid-column: span 2;
+  }
+
+  .service-card {
+    display: flex;
+    flex-direction: column;
+    background: #ffe6ac;
+  }
+
+  .service-image {
+    width: 100%;
+    display: block;
+  }
+
+  .service-body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .service-body h3 {
+    font-size: 1.8rem;
+  }
+
+  .service-body p {
+    font-size: 0.95rem;
+  }
+
+  .service-body .btn-dark {
+    margin-top: auto;
+  }
+
+  /* Vision */
+  .vision-image {
+    height: 260px;
+    min-height: 260px;
+    object-fit: cover;
+  }
+
+  .vision-overlay {
+    align-items: center;
+  }
+
+  .vision-content {
+    max-width: 900px;
+  }
+
+  .vision-content h2 {
+    font-size: 2rem;
+  }
+
+  /* Team */
+  .team-section {
+    padding: 3rem 0;
+  }
+
+  .team-member {
+    display: flex;
+    margin-bottom: 0;
+    background: #ffe6ac;
+  }
+
+  .team-member-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .team-image,
+  .team-content {
+    width: 50%;
+  }
+
+  .team-content {
+    padding: 1rem;
+  }
+
+  /* Contact */
+  .contact-section {
+    padding: 3rem 0;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    align-items: start;
+  }
+
+  .contact-form-wrap {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .location-wrap {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  .hours-wrap {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+  }
+
+  .form-group textarea {
+    height: 140px;
+  }
+
+  .location-wrap iframe {
+    min-height: 320px;
+  }
+
+  /* Footer */
+  .site-footer {
+    padding: 1.5rem 0;
+  }
 }
