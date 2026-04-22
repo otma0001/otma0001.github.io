@@ -1,4 +1,4 @@
-/* CSS Reset */
+/* ================= RESET ================= */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,143 +6,83 @@
 }
 
 img {
-  display: block;
-  max-width: 100%;
-}
-
-iframe {
-  display: block;
   width: 100%;
-  border: 0;
+  display: block;
 }
 
-input,
-textarea,
-button {
-  font: inherit;
-}
-
-/* Base Styles */
 body {
   font-family: 'Open Sans', sans-serif;
   color: #222;
-  background: #fff;
-  line-height: 1.5;
 }
 
-h1,
-h2,
-h3 {
-  line-height: 1.2;
-  margin-bottom: 0.75rem;
+/* ================= GLOBAL ================= */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 800;
 }
 
 h2 {
-  font-size: 2.7rem;
-  font-weight: 800;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
 h3 {
-  font-size: 1.7rem;
-  font-weight: 700;
+  font-size: 1.5rem;
 }
 
 p {
   margin-bottom: 1rem;
 }
 
-ul {
-  list-style: none;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-/* Utility Classes */
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-.section-spacing {
-  padding: 4rem 0;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-.btn {
-  display: inline-block;
-  padding: 1.35rem 1.8rem;
-  font-size: 1.15rem;
-}
-
-.btn::after {
-  content: "\25B6";
-  margin-left: 0.8rem;
-  font-size: 0.9rem;
-}
-
+/* ================= BUTTONS ================= */
 .btn-primary {
   background: #c78c06;
   color: #222;
+  padding: 1rem 1.5rem;
+  display: inline-block;
+  margin-top: 1rem;
 }
 
 .btn-dark {
+  background: #222;
+  color: #fff;
+  padding: 1rem;
   display: block;
-  background: #222;
-  color: #fff;
   text-align: center;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
-.btn-outline {
-  background: #222;
-  border: 1px solid #c78c06;
-  color: #fff;
-}
-
-/* Header */
+/* ================= HEADER ================= */
 .site-header {
   background: #222;
   padding: 1rem 0;
 }
 
-.logo-link {
-  display: inline-block;
-  background: #c78c06;
-}
-
-.logo {
-  width: 100px;
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .nav-list {
-  margin-top: 1rem;
+  display: flex;
+  flex: 1;
+}
+
+.nav-list li {
+  flex: 1;
 }
 
 .nav-link {
   display: block;
-  padding: 1rem;
   text-align: center;
+  padding: 1rem;
   color: #c78c06;
 }
 
@@ -153,33 +93,28 @@ a {
 
 .search-form {
   display: flex;
-  margin-top: 1rem;
 }
 
 .search-input {
-  flex: 1;
-  min-width: 0;
+  padding: 0.5rem;
   border: 1px solid #c78c06;
-  padding: 0.7rem;
 }
 
 .search-button {
-  border: 1px solid #c78c06;
   background: #222;
   color: #c78c06;
+  border: 1px solid #c78c06;
   padding: 0 1rem;
-  cursor: pointer;
 }
 
-/* Hero */
-.hero-wrapper,
-.vision-wrapper {
+/* ================= HERO (FIXED LARGE BANNER) ================= */
+.hero-wrapper {
   position: relative;
 }
 
 .hero-image {
   width: 100%;
-  min-height: 420px;
+  height: 600px; /* BIG like mockup */
   object-fit: cover;
 }
 
@@ -187,35 +122,44 @@ a {
   position: absolute;
   inset: 0;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .hero-content {
   background: rgba(34, 34, 34, 0.75);
-  color: #fff;
-  padding: 1.5rem;
+  color: white;
+  max-width: 720px;
+  padding: 2rem;
   margin-top: 2rem;
 }
 
-/* About */
+.hero-content h1 {
+  font-size: 4.5rem;
+  margin-bottom: 1rem;
+}
+
+/* ================= ABOUT ================= */
 .about-section {
   background: #ffe6ac;
-  padding: 1.5rem 0;
+  padding: 2rem 0;
 }
 
-.about-content {
-  padding-top: 1.5rem;
+.about-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
 }
 
-/* Services */
+/* ================= SERVICES ================= */
 .services-section {
   background: #f3f3f3;
+  padding: 3rem 0;
 }
 
 .services-grid {
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-  margin-top: 2rem;
 }
 
 .service-card {
@@ -226,10 +170,13 @@ a {
   padding: 1rem;
 }
 
-/* Vision */
+/* ================= VISION ================= */
+.vision-wrapper {
+  position: relative;
+}
+
 .vision-image {
-  width: 100%;
-  min-height: 260px;
+  height: 400px;
   object-fit: cover;
 }
 
@@ -241,76 +188,69 @@ a {
 }
 
 .vision-content {
-  color: #fff;
-  padding: 2rem 0;
+  color: white;
 }
 
-/* Team */
+/* ================= TEAM ================= */
 .team-section {
   background: #f3f3f3;
-}
-
-.team-section h2,
-.contact-section h2,
-.services-section h2 {
-  margin-bottom: 1.5rem;
+  padding: 3rem 0;
 }
 
 .team-member {
+  display: flex;
   margin-bottom: 1rem;
-  background: #ffe6ac;
+}
+
+.team-member-reverse {
+  flex-direction: row-reverse;
 }
 
 .team-content {
+  background: #ffe6ac;
   padding: 1rem;
+  width: 50%;
 }
 
-.team-role {
-  border-bottom: 2px solid #c78c06;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  padding-bottom: 0.25rem;
+.team-image {
+  width: 50%;
 }
 
-/* Contact */
+/* ================= CONTACT ================= */
 .contact-section {
-  background: #f3f3f3;
+  padding: 3rem 0;
 }
 
 .contact-grid {
   display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
 
 .contact-form {
-  margin-bottom: 3rem;
+  margin-bottom: 3rem; /* FIX spacing */
 }
 
 .form-group {
   margin-bottom: 1rem;
 }
 
-.form-group label {
-  display: block;
-  margin-bottom: 0.25rem;
-}
-
-.form-group input,
-.form-group textarea {
+input,
+textarea {
   width: 100%;
-  border: 1px solid #222;
   padding: 0.5rem;
+  border: 1px solid #222;
 }
 
-.form-group textarea {
+textarea {
   height: 150px;
-  resize: vertical;
 }
 
 .hours-wrap h3 {
   margin-top: 2rem;
 }
 
+/* ================= TABLE ================= */
 .hours-table {
   width: 100%;
   border-collapse: collapse;
@@ -320,153 +260,16 @@ a {
 .hours-table td {
   border: 1px solid #222;
   padding: 0.75rem;
-  text-align: left;
 }
 
 .hours-table thead {
   background: #ffe6ac;
 }
 
-.location-wrap iframe {
-  min-height: 400px;
-}
-
-/* Footer */
+/* ================= FOOTER ================= */
 .site-footer {
   background: #222;
   color: #c78c06;
-  padding: 1.5rem 0;
-  font-size: 0.9rem;
-}
-
-.footer-inner p:last-child {
-  margin-bottom: 0;
-}
-
-.site-footer a {
-  text-decoration: underline;
-}
-
-/* Desktop */
-@media screen and (min-width: 760px) {
-  .site-header {
-    padding: 0.75rem 0;
-  }
-
-  .header-inner {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .site-nav {
-    flex: 1;
-  }
-
-  .nav-list {
-    display: flex;
-    align-items: center;
-    margin-top: 0;
-  }
-
-  .nav-list li {
-    flex: 1;
-  }
-
-  .search-form {
-    width: 250px;
-    margin-top: 0;
-  }
-
-  .hero-image {
-    height: 540px;
-  }
-
-  .hero-overlay {
-    align-items: center;
-  }
-
-  .hero-content {
-    max-width: 700px;
-    margin-top: 0;
-  }
-
-  .about-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: stretch;
-  }
-
-  .about-image {
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .about-content-wrap {
-    display: flex;
-    align-items: center;
-    padding-left: 1.5rem;
-  }
-
-  .services-grid {
-    grid-template-columns: repeat(6, 1fr);
-  }
-
-  .service-card-large {
-    grid-column: span 3;
-  }
-
-  .services-grid .service-card:not(.service-card-large) {
-    grid-column: span 2;
-  }
-
-  .service-card {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .team-member {
-    display: flex;
-    margin-bottom: 0;
-  }
-
-  .team-member + .team-member {
-    margin-top: 1rem;
-  }
-
-  .team-member-reverse {
-    flex-direction: row-reverse;
-  }
-
-  .team-image,
-  .team-content {
-    width: 50%;
-  }
-
-  .contact-grid {
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 2rem;
-    column-gap: 2rem;
-    align-items: start;
-  }
-
-  .contact-form-wrap {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-  }
-
-  .location-wrap {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-  }
-
-  .hours-wrap {
-    grid-column: 1 / 3;
-    grid-row: 2 / 3;
-    margin-top: 0;
-  }
-
-  .hours-wrap h3 {
-    margin-top: 0;
-  }
+  padding: 1rem;
+  text-align: center;
 }
